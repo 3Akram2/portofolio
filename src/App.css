@@ -104,6 +104,9 @@ h1 {
   transition: .25s ease;
   position: relative;
   overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
 }
 .btn::after {
   content: '';
@@ -161,6 +164,37 @@ h1 {
 .section-divider path { fill: var(--bg-soft); opacity: .8; }
 
 .stack { display: grid; gap: 18px; padding-bottom: 40px; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stat-card {
+  border: 1px solid #2f4f90;
+  background: #0f1d3d;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #d7e6ff;
+}
+
+.stat-label {
+  margin: 3px 0 0;
+  color: #abc0ea;
+  font-size: .9rem;
+}
+
+.feature-list {
+  margin-top: 14px;
+  color: #cbdbff;
+}
 
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--card);
@@ -350,4 +384,5 @@ footer {
   .photo-wrap { width: min(420px, 100%); }
   .project-card { grid-template-columns: 1fr; }
   .project-visual { padding: 14px; }
+  .stats-grid { grid-template-columns: 1fr; }
 }

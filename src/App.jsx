@@ -57,7 +57,19 @@ const companies = [
   'Ascend Labs'
 ]
 
-const scheduleMailto = 'mailto:omarakram302@gmail.com?subject=Portfolio%20Inquiry%20-%20Schedule%20a%20Call&body=Hi%20Omar%2C%0A%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20call.%0A%0APreferred%20date%2Ftime%3A%20%0ATimezone%3A%20%0AProject%20details%3A%20%0A%0AThanks.'
+const scheduleMailto = 'mailto:omarakram302@gmail.com?subject=Portfolio%20Inquiry%20-%20Schedule%20a%20Call'
+
+const highlights = [
+  { label: 'Years Experience', value: '2+' },
+  { label: 'Projects Delivered', value: '6+' },
+  { label: 'Core Focus', value: 'Backend + DevOps' }
+]
+
+const featureHighlights = [
+  'Production-ready API architecture',
+  'Cloud deployments with Docker and CI/CD',
+  'AI integrations and data pipelines'
+]
 
 export default function App() {
   const [progress, setProgress] = useState(0)
@@ -95,6 +107,10 @@ export default function App() {
   }, [])
 
   const skillItems = useMemo(() => Object.entries(skillGroups), [])
+
+  const handleStartConversation = () => {
+    window.location.href = scheduleMailto
+  }
 
   return (
     <>
@@ -142,6 +158,23 @@ export default function App() {
       </div>
 
       <main className="container stack">
+        <section className="card reveal">
+          <h2>Quick Highlights</h2>
+          <div className="stats-grid">
+            {highlights.map((item) => (
+              <article key={item.label} className="stat-card">
+                <p className="stat-value">{item.value}</p>
+                <p className="stat-label">{item.label}</p>
+              </article>
+            ))}
+          </div>
+          <ul className="feature-list">
+            {featureHighlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
         <section id="projects" className="card reveal">
           <h2>Selected Projects</h2>
           <div className="projects">
@@ -205,7 +238,7 @@ export default function App() {
         <section className="contact-cta reveal">
           <p>Let’s build something powerful together.</p>
           <div className="cta-actions">
-            <a className="btn primary" href={scheduleMailto}>Start a Conversation</a>
+            <button type="button" className="btn primary" onClick={handleStartConversation}>Start a Conversation</button>
             <a className="btn" href="https://www.linkedin.com/in/3akram2" target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="btn" href="https://github.com/3akram2" target="_blank" rel="noreferrer">GitHub</a>
           </div>
