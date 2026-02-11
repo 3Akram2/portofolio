@@ -48,6 +48,17 @@ const timeline = [
   { year: '2024', title: 'Cloud-Native Foundations', text: 'Focused on Docker, cloud services, and scalable API architecture.' }
 ]
 
+const companies = [
+  'Journey',
+  'Ibtkaar',
+  'MyAtlas',
+  'Self-Healers Circle',
+  'FounderBrand',
+  'Ascend Labs'
+]
+
+const zoomCalendarUrl = 'https://calendar.zoom.us/'
+
 export default function App() {
   const [progress, setProgress] = useState(0)
   const [mouse, setMouse] = useState({ x: 70, y: 20 })
@@ -103,9 +114,12 @@ export default function App() {
               Focused on <strong>Node.js/NestJS</strong>, <strong>Strapi</strong>, and reliable DevOps workflows.
             </p>
 
+            <div className="experience-badge">2+ years of professional experience</div>
+
             <div className="actions">
               <a className="btn primary" href="#projects">View Projects</a>
-              <a className="btn" href="mailto:omarakram302@gmail.com">Contact Me</a>
+              <a className="btn" href="https://www.linkedin.com/in/3akram2" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a className="btn" href="https://github.com/3akram2" target="_blank" rel="noreferrer">GitHub</a>
             </div>
 
             <ul className="meta">
@@ -163,6 +177,15 @@ export default function App() {
           </div>
         </section>
 
+        <section className="card reveal">
+          <h2>Companies & Products I’ve Worked On</h2>
+          <div className="company-grid">
+            {companies.map((company) => (
+              <span key={company} className="company-chip">{company}</span>
+            ))}
+          </div>
+        </section>
+
         <section className="card reveal timeline-card">
           <h2>Journey</h2>
           <div className="timeline">
@@ -181,7 +204,11 @@ export default function App() {
 
         <section className="contact-cta reveal">
           <p>Let’s build something powerful together.</p>
-          <a className="btn primary" href="mailto:omarakram302@gmail.com">Start a Conversation</a>
+          <div className="cta-actions">
+            <a className="btn primary" href={zoomCalendarUrl} target="_blank" rel="noreferrer">Start a Conversation</a>
+            <a className="btn" href="https://www.linkedin.com/in/3akram2" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a className="btn" href="https://github.com/3akram2" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
         </section>
       </main>
 

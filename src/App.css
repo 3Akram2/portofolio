@@ -80,6 +80,18 @@ h1 {
 
 .lead { color: var(--muted); max-width: 66ch; }
 
+.experience-badge {
+  margin-top: 14px;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #3b5ea8;
+  background: rgba(93, 162, 255, 0.14);
+  color: #cfe1ff;
+  font-weight: 700;
+  font-size: .92rem;
+}
+
 .actions { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
   display: inline-block;
@@ -235,6 +247,21 @@ li { margin: 5px 0; }
 }
 .chips span:hover { border-color: #6995ff; transform: translateY(-1px); }
 
+.company-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.company-chip {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #36589e;
+  background: #0f1f42;
+  color: #d8e6ff;
+  font-weight: 600;
+}
+
 .timeline-card { position: relative; }
 .timeline {
   display: grid;
@@ -283,6 +310,12 @@ li { margin: 5px 0; }
   flex-wrap: wrap;
 }
 .contact-cta p { margin: 0; font-size: 1.1rem; font-weight: 700; }
+
+.cta-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
 footer {
   border-top: 1px solid #22325d;
