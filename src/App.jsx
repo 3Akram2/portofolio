@@ -57,7 +57,7 @@ const companies = [
   'Ascend Labs'
 ]
 
-const zoomCalendarUrl = 'https://calendar.zoom.us/'
+const scheduleMailto = 'mailto:omarakram302@gmail.com?subject=Portfolio%20Inquiry%20-%20Schedule%20a%20Call&body=Hi%20Omar%2C%0A%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20call.%0A%0APreferred%20date%2Ftime%3A%20%0ATimezone%3A%20%0AProject%20details%3A%20%0A%0AThanks.'
 
 export default function App() {
   const [progress, setProgress] = useState(0)
@@ -205,7 +205,7 @@ export default function App() {
         <section className="contact-cta reveal">
           <p>Let’s build something powerful together.</p>
           <div className="cta-actions">
-            <a className="btn primary" href={zoomCalendarUrl} target="_blank" rel="noreferrer">Start a Conversation</a>
+            <a className="btn primary" href={scheduleMailto}>Start a Conversation</a>
             <a className="btn" href="https://www.linkedin.com/in/3akram2" target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="btn" href="https://github.com/3akram2" target="_blank" rel="noreferrer">GitHub</a>
           </div>
