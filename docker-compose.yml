@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portofolio_web
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - portofolio_net
+      - public_proxy
+
+networks:
+  portofolio_net:
+  public_proxy:
+    external: true
+    name: public-proxy
