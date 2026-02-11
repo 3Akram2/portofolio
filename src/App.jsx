@@ -9,7 +9,9 @@ const projects = [
       'Built Dockerized frontend/backend architecture with production-ready networking.',
       'Set up reverse proxy + HTTPS domain routing for stable public access.',
       'Added deployment workflow for faster release cycles.'
-    ]
+    ],
+    cta: 'View Architecture',
+    href: 'https://github.com/3Akram2/rentals-v2'
   },
   {
     title: 'Journey — Hospitality Platform',
@@ -182,7 +184,11 @@ export default function App() {
                   <ul>
                     {p.points.map((pt) => <li key={pt}>{pt}</li>)}
                   </ul>
-                  <p className="project-note">Case study available on request.</p>
+                  {p.href ? (
+                    <a className="project-link" href={p.href} target="_blank" rel="noreferrer">{p.cta}</a>
+                  ) : (
+                    <p className="project-note">Case study available on request.</p>
+                  )}
                 </div>
               </article>
             ))}
