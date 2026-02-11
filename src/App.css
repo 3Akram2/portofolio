@@ -254,6 +254,12 @@ li { margin: 5px 0; }
 .project-visual small { color: #c7d7ff; text-align: center; }
 .project-content { padding: 14px 16px; }
 
+.project-note {
+  margin: 10px 0 0;
+  color: #9eb7e8;
+  font-size: .9rem;
+}
+
 .project-link {
   margin-top: 10px;
   border: 1px solid #3858a0;
