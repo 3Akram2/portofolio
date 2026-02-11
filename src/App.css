@@ -264,6 +264,8 @@ li { margin: 5px 0; }
   font-weight: 600;
   cursor: pointer;
   transition: .2s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 .project-link:hover { background: #183060; transform: translateY(-1px); }
 

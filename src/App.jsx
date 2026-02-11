@@ -10,7 +10,8 @@ const projects = [
       'Set up reverse proxy + HTTPS domain routing for stable public access.',
       'Added deployment workflow for faster release cycles.'
     ],
-    cta: 'View Architecture'
+    cta: 'View Architecture',
+    href: 'https://github.com/3Akram2/rentals-v2'
   },
   {
     title: 'Journey — Hospitality Platform',
@@ -21,7 +22,8 @@ const projects = [
       'Implemented Vertex AI Search for structured discovery and retrieval quality.',
       'Optimized media delivery via Cloudflare image transformations + CDN tuning.'
     ],
-    cta: 'View Case Study'
+    cta: 'View Case Study',
+    href: 'mailto:omarakram302@gmail.com?subject=Journey%20Case%20Study%20Request'
   },
   {
     title: 'Ibtkaar — AI Knowledge Base',
@@ -32,7 +34,8 @@ const projects = [
       'Built schema + upload + RBAC visibility controls for secure access.',
       'Enabled asynchronous service communication using RabbitMQ.'
     ],
-    cta: 'Explore Solution'
+    cta: 'Explore Solution',
+    href: 'mailto:omarakram302@gmail.com?subject=Ibtkaar%20Project%20Details%20Request'
   }
 ]
 
@@ -57,7 +60,7 @@ const companies = [
   'Ascend Labs'
 ]
 
-const scheduleMailto = 'mailto:omarakram302@gmail.com?subject=Portfolio%20Inquiry%20-%20Schedule%20a%20Call'
+const scheduleMailto = 'mailto:omarakram302@gmail.com?subject=Portfolio%20Inquiry%20-%20Schedule%20a%20Call&body=Hi%20Omar%2C%0A%0AI%20would%20like%20to%20schedule%20a%20call.%0A%0APreferred%20date%2Ftime%3A%20%0ATimezone%3A%20%0AProject%20details%3A%20'
 
 const highlights = [
   { label: 'Years Experience', value: '2+' },
@@ -107,10 +110,6 @@ export default function App() {
   }, [])
 
   const skillItems = useMemo(() => Object.entries(skillGroups), [])
-
-  const handleStartConversation = () => {
-    window.location.href = scheduleMailto
-  }
 
   return (
     <>
@@ -189,7 +188,7 @@ export default function App() {
                   <ul>
                     {p.points.map((pt) => <li key={pt}>{pt}</li>)}
                   </ul>
-                  <button className="project-link">{p.cta}</button>
+                  <a className="project-link" href={p.href} target={p.href.startsWith('http') ? '_blank' : undefined} rel={p.href.startsWith('http') ? 'noreferrer' : undefined}>{p.cta}</a>
                 </div>
               </article>
             ))}
@@ -238,7 +237,7 @@ export default function App() {
         <section className="contact-cta reveal">
           <p>Let’s build something powerful together.</p>
           <div className="cta-actions">
-            <button type="button" className="btn primary" onClick={handleStartConversation}>Start a Conversation</button>
+            <a className="btn primary" href={scheduleMailto}>Start a Conversation</a>
             <a className="btn" href="https://www.linkedin.com/in/3akram2" target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="btn" href="https://github.com/3akram2" target="_blank" rel="noreferrer">GitHub</a>
           </div>
