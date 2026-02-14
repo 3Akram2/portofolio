@@ -2,6 +2,56 @@ import { useEffect, useMemo, useState } from 'react'
 
 const projects = [
   {
+    title: 'Journey — Hospitality Platform',
+    tag: 'Backend Engineering • Data + Search',
+    visual: 'JR',
+    points: [
+      'Delivered a Guest Insights pipeline (BigQuery → Strapi) with streaming AI summaries and real-time delivery.',
+      'Integrated Vertex AI Search for property discovery with structured filters and query mapping.',
+      'Applied Cloudflare image transformations and CDN caching to reduce mobile payload and improve page speed.'
+    ]
+  },
+  {
+    title: 'Ibtkaar — AI Knowledge Base Platform',
+    tag: 'Backend Engineering • AI Integration',
+    visual: 'KB',
+    points: [
+      'Built NestJS middleware between web frontend and internal AI services with production-grade APIs.',
+      'Designed knowledge base schema (bases, collections, files, metadata) and implemented CRUD/upload services.',
+      'Implemented RBAC visibility rules and coordinated backend↔AI communication via RabbitMQ.'
+    ]
+  },
+  {
+    title: 'MyAtlas — Health Data Processing',
+    tag: 'Backend + Cloud',
+    visual: 'MA',
+    points: [
+      'Built Python processors and Node.js hooks to normalize Apple Health/WHOOP/Fitbit data into unified records.',
+      'Enabled background sync and secure mobile APIs with FCM integration.',
+      'Hardened AWS delivery with CI/CD automation using GitHub Actions (OIDC).'
+    ]
+  },
+  {
+    title: 'Self-Healers Circle — Social Platform',
+    tag: 'Backend Product Engineering',
+    visual: 'SH',
+    points: [
+      'Shipped core social features: posts, comments, reactions, and privacy controls.',
+      'Automated scheduled publishing with serverless jobs.',
+      'Improved reliability of content workflows on production back-end services.'
+    ]
+  },
+  {
+    title: 'SPS3 — Port Operations System (ISFP)',
+    tag: 'Enterprise Operations',
+    visual: 'SP',
+    points: [
+      'Delivered backend modules for gate operations, truck flow, warehousing, invoicing, and licensing.',
+      'Implemented Oracle SQL routines and validations to improve integrity under high-volume operations.',
+      'Built operational/admin interfaces used by logistics and finance teams.'
+    ]
+  },
+  {
     title: 'Rentals Management System',
     tag: 'SaaS • Real Estate',
     visual: 'RM',
@@ -12,48 +62,6 @@ const projects = [
     ],
     cta: 'View Architecture',
     href: 'https://github.com/3Akram2/rentals-v2'
-  },
-  {
-    title: 'Portfolio Web App',
-    tag: 'Personal Brand • Frontend',
-    visual: 'PF',
-    points: [
-      'Built a responsive React + Vite portfolio with animated UI sections.',
-      'Added Docker + Nginx deployment for clean production hosting.',
-      'Optimized project storytelling and CTA flow for client conversations.'
-    ],
-    cta: 'View Source',
-    href: 'https://github.com/3Akram2/portofolio'
-  },
-  {
-    title: 'Hand Dashboard',
-    tag: 'Observability • Ops',
-    visual: 'HD',
-    points: [
-      'Built a real-time operational dashboard using Express + WebSocket streaming.',
-      'Tracked OpenClaw sessions, resource metrics, and Docker runtime status.',
-      'Added memory timeline + activity monitoring for faster troubleshooting.'
-    ]
-  },
-  {
-    title: 'Journey — Hospitality Platform',
-    tag: 'Data + Search',
-    visual: 'JR',
-    points: [
-      'Guest insights pipeline with real-time delivery and reliable event flow.',
-      'Implemented Vertex AI Search for structured discovery and retrieval quality.',
-      'Optimized media delivery via Cloudflare image transformations + CDN tuning.'
-    ]
-  },
-  {
-    title: 'Ibtkaar — AI Knowledge Base',
-    tag: 'Enterprise AI',
-    visual: 'AI',
-    points: [
-      'Designed NestJS middleware between frontend and AI service layer.',
-      'Built schema + upload + RBAC visibility controls for secure access.',
-      'Enabled asynchronous service communication using RabbitMQ.'
-    ]
   }
 ]
 
