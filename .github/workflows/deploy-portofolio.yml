@@ -1,0 +1,30 @@
+name: Deploy Portofolio
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy over SSH (password auth)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.PORTOFOLIO_DEPLOY_HOST }}
+          port: ${{ secrets.PORTOFOLIO_DEPLOY_PORT }}
+          username: ${{ secrets.PORTOFOLIO_DEPLOY_USER }}
+          password: ${{ secrets.PORTOFOLIO_DEPLOY_PASSWORD }}
+          script_stop: true
+          command_timeout: 30m
+          script: |
+            set -e
+            cd "${{ secrets.PORTOFOLIO_DEPLOY_PATH }}"
+            git fetch origin
+            git checkout "${{ github.ref_name }}"
+            git reset --hard "origin/${{ github.ref_name }}"
+            docker compose up -d --build
+            docker image prune -f
+            docker ps --format 'table {{.Names}}\t{{.Status}}'
