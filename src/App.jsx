@@ -14,6 +14,28 @@ const projects = [
     href: 'https://github.com/3Akram2/rentals-v2'
   },
   {
+    title: 'Portfolio Web App',
+    tag: 'Personal Brand • Frontend',
+    visual: 'PF',
+    points: [
+      'Built a responsive React + Vite portfolio with animated UI sections.',
+      'Added Docker + Nginx deployment for clean production hosting.',
+      'Optimized project storytelling and CTA flow for client conversations.'
+    ],
+    cta: 'View Source',
+    href: 'https://github.com/3Akram2/portofolio'
+  },
+  {
+    title: 'Hand Dashboard',
+    tag: 'Observability • Ops',
+    visual: 'HD',
+    points: [
+      'Built a real-time operational dashboard using Express + WebSocket streaming.',
+      'Tracked OpenClaw sessions, resource metrics, and Docker runtime status.',
+      'Added memory timeline + activity monitoring for faster troubleshooting.'
+    ]
+  },
+  {
     title: 'Journey — Hospitality Platform',
     tag: 'Data + Search',
     visual: 'JR',
@@ -51,9 +73,7 @@ const companies = [
   'Journey',
   'Ibtkaar',
   'MyAtlas',
-  'Self-Healers Circle',
-  'FounderBrand',
-  'Ascend Labs'
+  'Self-Healers Circle'
 ]
 
 const scheduleGmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=omarakram302@gmail.com&su=Portfolio%20Inquiry%20-%20Schedule%20a%20Call&body=Hi%20Omar%2C%0A%0AI%20would%20like%20to%20schedule%20a%20call.%0A%0APreferred%20date%2Ftime%3A%0ATimezone%3A%0AProject%20details%3A%0A'
